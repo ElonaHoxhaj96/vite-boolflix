@@ -38,8 +38,8 @@ export default{
 .flip-card {
     margin-top: 2rem ;
   background-color: transparent;
-  width: calc(100vw / 6 - 2rem);
-  height: 350px;
+  width: auto;
+  min-height: 538px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -83,5 +83,6 @@ export default{
 img{
     width: 100%;
 }
+    
     
 </style>

@@ -18,7 +18,7 @@ export default {
         }
     },
     methods: {
-        getMovie(){
+        getSerie(){
             let endPoint = store.apiURLSeries;
 
             axios.get(endPoint)
@@ -29,10 +29,23 @@ export default {
             .catch(err => {
             console.log(err);
         })
+        },
+        getFilm(){
+            let endPoint2 = store.apiURLFilm;
+
+            axios.get(endPoint2)
+            .then( res => {
+                console.log(res.data.results);
+                store.filmList = res.data.results;
+            })
+            .catch(err => {
+            console.log(err);
+        })
         }
     },
     created(){
-            this.getMovie();
+            this.getSerie();
+            this.getFilm();
         }
 }
 </script>
@@ -48,7 +61,6 @@ export default {
 <style lang="scss">
 @use 'src/styles/general.scss' as *;
 main{
-    min-height: calc(100vh - 70px);
     background-color: rgb(59, 59, 59);
 }
 
