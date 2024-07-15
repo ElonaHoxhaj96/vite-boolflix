@@ -1,14 +1,15 @@
 <script>
+import { info } from 'sass';
 import { store } from '../store';
 
 export default{
     name:'SerieApp',
     props: {
-        info: Array,
+        info: Object,
     },
     data(){
         return{
-            store
+            store,
         }
     }
 }
@@ -18,12 +19,12 @@ export default{
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                
+                <img :src="info.poster_path" :alt="info.title">
             </div>
             <div class="flip-card-back">
-                <h1>{{info.title}}</h1>
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
+                <h1>{{ info.original_title }}</h1>
+                <p>didsjspa</p>
+                <p>kskkdd</p>
             </div>
         </div>
     </div>
@@ -35,7 +36,7 @@ export default{
 .flip-card {
   background-color: transparent;
   width: 300px;
-  height: 200px;
+  height: 300px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }

@@ -19,12 +19,12 @@ export default {
     },
     methods: {
         getMovie(){
-            let endPoint = store.apiURL;
+            let endPoint = store.apiURLSeries;
 
             axios.get(endPoint)
             .then( res => {
-                console.log(res.results);
-                store.movieList = res.results;
+                console.log(res.data.results);
+                store.serieList = res.data.results;
             })
             .catch(err => {
             console.log(err);
