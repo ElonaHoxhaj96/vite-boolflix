@@ -20,6 +20,9 @@ export default{
 </template>
 
 <style lang="scss">
+header{
+    height: 70px;
+}
 nav{
     background-color: black;
     height: 70px;

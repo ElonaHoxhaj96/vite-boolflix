@@ -19,12 +19,13 @@ export default{
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img :src="info.poster_path" :alt="info.title">
+                <img :src="`https://image.tmdb.org/t/p/w342/${info.poster_path}`" :alt="info.title">
             </div>
             <div class="flip-card-back">
-                <h1>{{ info.original_title }}</h1>
-                <p>didsjspa</p>
-                <p>kskkdd</p>
+               <div><strong>Titolo:</strong> {{ info.title }} </div>
+               <div><strong>Titolo Originale: </strong>{{ info.original_title }}</div>
+               <div><strong>Lingua: </strong> {{ info.original_language }} </div>
+               <div><strong>Voto: </strong>{{ info.vote_average }} </div>
             </div>
         </div>
     </div>
@@ -33,10 +34,12 @@ export default{
 <style lang="scss">
 @use 'src/styles/general.scss' as *;
   
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
+    margin-top: 2rem ;
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: calc(100vw / 6 - 2rem);
+  height: 350px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -73,9 +76,12 @@ export default{
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color:black;
   color: white;
   transform: rotateY(180deg);
+}
+img{
+    width: 100%;
 }
     
 </style>

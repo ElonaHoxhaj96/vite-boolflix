@@ -48,7 +48,8 @@ export default {
 <style lang="scss">
 @use 'src/styles/general.scss' as *;
 main{
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+    background-color: rgb(59, 59, 59);
 }
 
 </style>
