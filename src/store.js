@@ -12,5 +12,9 @@ export const store = reactive({
     filmList: [],
     // richiamo url dell'API per le seire 
     apiURLFilm: 'https://api.themoviedb.org/3/search/movie?api_key=0decba92338a897ff1b03e75d79c6309&query=avengers&media_type=movie',
+    
+    searchQuery: '',
+
+    apiNameParam: "query",
 
 })

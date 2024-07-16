@@ -29,7 +29,7 @@ export default{
         <h2>FILM</h2>
         <div class="row">
             <div class="col-3 col md-5" v-for="film in store.filmList" :key="film.id"> 
-                <FilmApp :info="film"/>
+                <FilmApp :infoFilm="film"/>
             </div>
         </div>
 

@@ -1,6 +1,13 @@
 <script>
+//import dello store 
+import { store } from '../store'
 export default{
     name:'AppHeader',
+    data(){
+        return{
+            store,
+        }
+    }
 }
 </script>
 
@@ -11,9 +18,10 @@ export default{
             <div id="logo">
                 <a href="#"><h1>BOOLFLIX</h1></a>
             </div>
-            <div id="search_bar">
-                <input type="text">
-            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="store.searchQuery">
+                <button class="btn btn-outline-success" type="submit" @click.prevent="$emit('search')">Search</button>
+            </form>
         </nav>
     </header>
 

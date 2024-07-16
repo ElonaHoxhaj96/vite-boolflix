@@ -1,11 +1,10 @@
 <script>
-import { info } from 'sass';
 import { store } from '../store';
 
 export default{
     name:'FilmApp',
     props: {
-        info: Array,
+        infoFilm: Object,
     },
     data(){
         return{
@@ -19,13 +18,13 @@ export default{
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img :src="`https://image.tmdb.org/t/p/w342/${info.poster_path}`" :alt="info.title">
+                <img :src="`https://image.tmdb.org/t/p/w342/${infoFilm.poster_path}`" :alt="infoFilm.title">
             </div>
             <div class="flip-card-back">
-               <div><strong>Titolo:</strong> {{ info.title }} </div>
-               <div><strong>Titolo Originale: </strong>{{ info.original_title }}</div>
-               <div><strong>Lingua: </strong> {{ info.original_language }} </div>
-               <div><strong>Voto: </strong>{{ info.vote_average }} </div>
+               <div><strong>Titolo:</strong> {{ infoFilm.title }} </div>
+               <div><strong>Titolo Originale: </strong>{{ infoFilm.original_title }}</div>
+               <div><strong>Lingua: </strong> {{ infoFilm.original_language }} </div>
+               <div><strong>Voto: </strong>{{ infoFilm.vote_average }} </div>
             </div>
         </div>
     </div>

@@ -4,6 +4,7 @@ import axios from '../node_modules/axios';
 // importazione file 
 import AppHeader from './components/AppHeader.vue'
 import MoviesCards from './components/MoviesCards.vue'
+
 //import store
 import { store } from './store';
 export default {
@@ -51,7 +52,7 @@ export default {
 </script>
 
 <template>
-    <AppHeader/>
+    <AppHeader @search="getSerie"/>
     <main>
         <MoviesCards/>
     </main>
